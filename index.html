@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electronic Letter Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Intro Welcome Screen -->
+  <div class="intro-overlay" id="introOverlay">
+    <div class="intro-card">
+      <span class="ornament">&#10045;</span>
+      <h2 class="intro-title">Electronic Letter Card</h2>
+      <p class="intro-message">Do you want to continue?</p>
+      <div class="intro-buttons">
+        <button type="button" class="btn btn-primary" id="yesBtn">Yes</button>
+        <button type="button" class="btn btn-no" id="noBtn">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Envelope Scene -->
+  <main class="scene" id="mainScene">
+    <p class="hint" id="hintText">Click the envelope or wax seal to open</p>
+
+    <div class="envelope-wrapper" id="envelopeWrapper">
+      <div class="envelope" id="envelope">
+        <div class="envelope-back"></div>
+
+        <!-- Letter Card Inside -->
+        <article class="letter" id="letter">
+          <div class="letter-border">
+            <header class="letter-header">
+              <span class="date" contenteditable="true" spellcheck="false">November 16, 2026</span>
+              <span class="ornament">&#10045;</span>
+            </header>
+
+            <h1 class="salutation" contenteditable="true" spellcheck="false">Dearest Ma'am Roan,</h1>
+
+            <div class="letter-body" contenteditable="true" spellcheck="false">
+              <p>Hii Ma'am Roan! I just want to express how grateful I am and how thankful we are na ikaw ang naging teacher namin. We're so lucky to have someone like you. Kahit minsan may kakulitan, you always made sure to guide us, understand us, and remind us. Thank you po for being more than just a teacher. Thank you for being our sumbungan whenever things get difficult. Ang dami po naming natutunan sa inyo, and I hope you know how much of an impact you've made on us.</p>
+              <p>Hindi lang po lessons sa school ang natutunan namin, but also lessons that we can carry with us even after we leave your classroom. I'm really grateful na naging part kayo ng journey namin. Thank you for your patience, kindness, understanding, and for never giving up on us kahit minsan makulit at pasaway kami. We may not always say it, but we truly appreciate you. Thank you so much po.</p>
+            </div>
+
+            <footer class="letter-footer">
+              <p class="sign-off" contenteditable="true" spellcheck="false">sincerely yours,</p>
+              <p class="signature" contenteditable="true" spellcheck="false">Justin Marzan</p>
+            </footer>
+          </div>
+        </article>
+
+        <!-- Envelope Flaps -->
+        <div class="flap flap-left"></div>
+        <div class="flap flap-right"></div>
+        <div class="flap flap-bottom"></div>
+        <div class="flap flap-top"></div>
+
+        <!-- Wax Seal Button -->
+        <button type="button" class="wax-seal" id="waxSeal" aria-label="Open envelope">
+          <span class="seal-inner">&#10084;</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Action Button -->
+    <div class="controls" id="controls">
+      <button type="button" class="btn btn-primary" id="closeBtn">Fold &amp; Seal Envelope</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
